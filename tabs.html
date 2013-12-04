@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Team Matches</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link href="round-robin-styles.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  
+  table  {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+}
+table caption  {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+table tr th  {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	height: 60px;
+}
+table tr {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: normal;
+	height: 40px;
+}
+table tr td {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+</style>  
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Scoring</a></li>
+    <li><a href="#tabs-2">Round1</a></li>
+    <li><a href="#tabs-3">Round2</a></li>
+    <li><a href="#tabs-4">Round3</a></li>
+    
+  </ul>
+  <div id="tabs-1">
+    <table width="800" border="1">
+  <caption>
+    Score Sheet
+  </caption>
+  <tr>
+    <th width="172" scope="col">Player Team &amp; Name (ex. Team 1 John)</th>
+    <th width="54" scope="col">Player Rd. 1</th>
+    <th width="54" scope="col">Opp. Rd. 1</th>
+    <th width="54" scope="col">Regular Scoring Rd. 1</th>
+    <th width="54" scope="col">Player Rd. 2</th>
+    <th width="54" scope="col">Opp. Rd. 2</th>
+    <th width="54" scope="col">Regular Scoring Rd. 2</th>
+    <th width="54" scope="col">Player Rd. 3</th>
+    <th width="54" scope="col">Opp. Rd. 3</th>
+    <th width="54" scope="col">Regular Scoring Rd. 3</th>
+    <th width="48" scope="col">Team Name</th>
+    <th width="48" scope="col">Match Score</th>
+  </tr>
+  <tr>
+    <td contentEditable="true" class="player1-scoring">Bev</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>Team 1</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>Team 2</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  
+</table>
+  </div>
+  <div id="tabs-2">
+        <table width="800" border="1">
+  <caption>
+    Round 1
+  </caption>
+  <tr>
+    <th width="172" scope="col">Player Team &amp; Name</th>
+    <th width="60" scope="col">Player #</th>
+    <th width="60" scope="col">Court #</th>
+    <th width="53" scope="col">Score for -&#8250;</th>
+    <th width="178" scope="col">Player Rd. 1</th>
+    <th width="178" scope="col">Server Rd. 1</th>
+    <th width="53" scope="col">Score  &#8249;-for</th>
+  </tr>
+  <tr>
+    <td class="player1-round"></td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>3</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>4</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>5</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>6</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  
+</table>
+  </div>
+  <div id="tabs-3">
+        <table width="800" border="1">
+  <caption>
+    Round 2
+  </caption>
+  <tr>
+    <th width="172" scope="col">Player Team &amp; Name</th>
+    <th width="60" scope="col">Player #</th>
+    <th width="60" scope="col">Court #</th>
+    <th width="53" scope="col">Score for -&#8250;</th>
+    <th width="178" scope="col">Player Rd. 2</th>
+    <th width="178" scope="col">Server Rd. 2</th>
+    <th width="53" scope="col">Score  &#8249;-for</th>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>3</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>4</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>5</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>6</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  
+</table>
+  </div>
+  <div id="tabs-4">
+        <table width="800" border="1">
+  <caption>
+    Round 3
+  </caption>
+  <tr>
+    <th width="172" scope="col">Player Team &amp; Name</th>
+    <th width="60" scope="col">Player #</th>
+    <th width="60" scope="col">Court #</th>
+    <th width="53" scope="col">Score for -&#8250;</th>
+    <th width="178" scope="col">Player Rd. 3</th>
+    <th width="178" scope="col">Server Rd. 3</th>
+    <th width="53" scope="col">Score  &#8249;-for</th>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>3</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>4</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>5</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>6</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td contentEditable="true"></td>
+  </tr>
+  
+</table>
+  </div>
+</div>
+ 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="jquery.min.js"></script>
+<script src="tabs.js"></script>
+
+
+</body>
+</html>
