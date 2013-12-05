@@ -6,8 +6,8 @@
   <title>Team Matches</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <link href="round-robin-styles.css" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <!-- <link href="round-robin-styles.css" rel="stylesheet" type="text/css"> -->
   <style type="text/css">
     table {
       font-family: Verdana, Geneva, sans-serif;
@@ -40,19 +40,14 @@
   </style>
 </head>
 
-<body>
+<body ng-app>
 
-  <div id="tabs">
+  <div id="tabs" ng-controller="TennisTournament">
     <ul>
-      <li><a href="#tabs-1">Scoring</a>
-      </li>
-      <li><a href="#tabs-2">Round1</a>
-      </li>
-      <li><a href="#tabs-3">Round2</a>
-      </li>
-      <li><a href="#tabs-4">Round3</a>
-      </li>
-
+      <li><a href="#tabs-1">Scoring</a></li>
+      <li><a href="#tabs-2">Round1</a></li>
+      <li><a href="#tabs-3">Round2</a></li>
+      <li><a href="#tabs-4">Round3</a></li>
     </ul>
     <div id="tabs-1">
       <table width="800" border="1">
@@ -74,7 +69,7 @@
           <th width="48" scope="col">Match Score</th>
         </tr>
         <tr>
-          <td contentEditable="true" class="player1-scoring">Bev</td>
+          <td contentEditable="true" class="player1-scoring" ng-model="player1">Bev</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
@@ -157,7 +152,6 @@
           <td>&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
-
       </table>
     </div>
     <div id="tabs-2">
@@ -377,7 +371,7 @@
 
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <script src="jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
   <script src="tabs.js"></script>
 
 
