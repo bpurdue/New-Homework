@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="winwinTournament">
 
 <head>
   <meta charset="utf-8">
   <title>Team Matches</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-
   <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
   <!-- <link href="round-robin-styles.css" rel="stylesheet" type="text/css"> -->
+
   <style type="text/css">
     table {
       font-family: Verdana, Geneva, sans-serif;
@@ -39,7 +39,7 @@
   </style>
 </head>
 
-<body ng-app>
+<body>
 
   <div id="tabs" ng-controller="TennisTournament">
     <ul>
@@ -67,93 +67,23 @@
           <th width="48" scope="col">Team Name</th>
           <th width="48" scope="col">Match Score</th>
         </tr>
-        <tr>
-          <td contentEditable="true" class="player1-scoring" ng-model="player1">Bev</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>Team 1</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>Team 2</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+        <tr ng-repeat="player in players">
+          <td>{{player.team}} {{player.name}}</td>
+          <td>{{player.scores[0].player}}</td>
+          <td>{{player.scores[0].opponent}}</td>
+          <td>{{player.scores[0].regular}}</td>
+          <td>{{player.scores[1].player}}</td>
+          <td>{{player.scores[1].opponent}}</td>
+          <td>{{player.scores[1].regular}}</td>
+          <td>{{player.scores[2].player}}</td>
+          <td>{{player.scores[2].opponent}}</td>
+          <td>{{player.scores[2].regular}}</td>
+          <td>{{player.team}}</td>
           <td>&nbsp;</td>
         </tr>
       </table>
     </div>
-    <div id="tabs-2">
+    <div id="tabs-2" ng-controller="Round1">
       <table width="800" border="1">
         <caption>
           Round 1
@@ -167,8 +97,8 @@
           <th width="178" scope="col">Server Rd. 1</th>
           <th width="53" scope="col">Score &#8249;-for</th>
         </tr>
-        <tr>
-          <td class="player1-round"></td>
+        <tr ng-repeat="player in round1Players">
+          <td>{{player.team}} {{player.name}}</td>
           <td>1</td>
           <td>&nbsp;</td>
           <td contentEditable="true"></td>
@@ -176,55 +106,9 @@
           <td>&nbsp;</td>
           <td contentEditable="true"></td>
         </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>2</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>3</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>4</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>5</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>6</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-
       </table>
     </div>
-    <div id="tabs-3">
+    <div id="tabs-3" ng-controller="Round2">
       <table width="800" border="1">
         <caption>
           Round 2
@@ -238,8 +122,8 @@
           <th width="178" scope="col">Server Rd. 2</th>
           <th width="53" scope="col">Score &#8249;-for</th>
         </tr>
-        <tr>
-          <td>&nbsp;</td>
+        <tr ng-repeat="player in round2Players">
+          <td>{{player.team}} {{player.name}}</td>
           <td>1</td>
           <td>&nbsp;</td>
           <td contentEditable="true"></td>
@@ -247,55 +131,9 @@
           <td>&nbsp;</td>
           <td contentEditable="true"></td>
         </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>2</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>3</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>4</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>5</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>6</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-
       </table>
     </div>
-    <div id="tabs-4">
+    <div id="tabs-4" ng-controller="Round3">
       <table width="800" border="1">
         <caption>
           Round 3
@@ -309,8 +147,8 @@
           <th width="178" scope="col">Server Rd. 3</th>
           <th width="53" scope="col">Score &#8249;-for</th>
         </tr>
-        <tr>
-          <td>&nbsp;</td>
+        <tr ng-repeat="player in round3Players">
+          <td>{{player.team}} {{player.name}}</td>
           <td>1</td>
           <td>&nbsp;</td>
           <td contentEditable="true"></td>
@@ -318,52 +156,6 @@
           <td>&nbsp;</td>
           <td contentEditable="true"></td>
         </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>2</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>3</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>4</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>5</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>6</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td contentEditable="true"></td>
-        </tr>
-
       </table>
     </div>
   </div>
