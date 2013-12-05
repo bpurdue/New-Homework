@@ -1,6 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Team Matches</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <link href="round-robin-styles.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  
+  </style>
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Scoring</a></li>
+    <li><a href="#tabs-2">Round1</a></li>
+    <li><a href="#tabs-3">Round2</a></li>
+    <li><a href="#tabs-4">Round3</a></li>
+    
+  </ul>
+  <div id="tabs-1">
+    <table width="400" border="1">
+  <caption>
+    Score Sheet
+  </caption>
+  <tr>
+    <th width="50" scope="col">Team</th>
+    <th width="62" scope="col">Player Number</th>
+    <th width="62" scope="col">Rd. 1 Score</th>
+    <th width="62" scope="col">Rd. 2 Score</th>
+    <th width="62" scope="col">Rd. 3 Score</th>
+    <th width="62" scope="col">Player Total</th>
+    </tr>
+  <tr>
+    <td class="blue bold">A</td>
+    <td>#1</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td class="blue bold">A</td>
+    <td>#2</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="blue bold">A</td>
+    <td>#3</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td colspan="5" class="align-right-bold blue">TEAM A TOTAL</td>
+    <td class="bold blue-border">&nbsp;</td>
+    
+  </tr>  
+  <tr>
+    <td class="green bold">B</td>
+    <td>#4</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td class="green bold">B</td>
+    <td>#5</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td class="green bold">B</td>
+    <td>#6</td>
+    <td class="rd1p6-scoresheet bg-red"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td colspan="5" class="align-right-bold green">TEAM B TOTAL</td>
+    <td class="bold green-border">&nbsp;</td>
+    
+  </tr>
+  
+</table>
+  </div>
+  <div id="tabs-2">
+        <table width="408" border="1">
+  <caption>
+    Round 1
+  </caption>
+  <tr>
+    <th width="41" scope="col">Court #</th>
+    <th width="80" scope="col">Score for -&#8250;</th>
+    <th width="100" scope="col">Player #</th>
+    <th width="100" scope="col">Player # (serves first)</th>
+    <th width="53" scope="col">Score  &#8249;-for</th>
+  </tr>
+  <tr>
     <td>Ct. 1</td>
     <td class="bg-red" id="rd1p6">
     <form action="" method="post">
     <input type="text" id="rd1p6" name="rd1p6" placeholder="Enter score" size="10"><br />
     <input type="submit" value="Submit">
     </form>
+    </td>
+    <td>#6</td>
+    <td>#1</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>Ct. 2</td>
+    <td class="bg-green" contentEditable="true"></td>
+    <td>#2</td>
+    <td>#5</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>Ct. 3</td>
+    <td class="bg-green" contentEditable="true"></td>
+    <td>#3</td>
+    <td>#4</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  
+</table>
+  </div>
+  <div id="tabs-3">
+        <table width="400" border="1">
+  <caption>
+    Round 2
+  </caption>
+  <tr>
+    <th width="60" scope="col">Court #</th>
+    <th width="53" scope="col">Score for -&#8250;</th>
+    <th width="100" scope="col">Player #</th>
+    <th width="100" scope="col">Player # (serves first)</th>
+    <th width="53" scope="col">Score  &#8249;-for</th>
+  </tr>
+  <tr>
+    <td>Ct. 1</td>
+    <td class="bg-green" contentEditable="true"></td>
+    <td>#1</td>
+    <td>#5</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>Ct. 2</td>
+    <td class="bg-green" contentEditable="true"></td>
+    <td>#4</td>
+    <td>#2</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>Ct. 3</td>
+    <td class="bg-green" contentEditable="true"></td>
+    <td>#3</td>
+    <td>#6</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  
+</table>
+
+  </div>
+  <div id="tabs-4">
+        <table width="400" border="1">
+  <caption>
+    Round 3
+  </caption>
+  <tr>
+    <th width="60" scope="col">Court #</th>
+    <th width="53" scope="col">Score for -&#8250;</th>
+    <th width="100" scope="col">Player #</th>
+    <th width="100" scope="col">Player # (serves first)</th>
+    <th width="53" scope="col">Score  &#8249;-for</th>
+  </tr>
+  <tr>
+    <td>Ct. 1</td>
+    <td class="bg-green" contentEditable="true"></td>
+    <td>#4</td>
+    <td>#1</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>Ct. 2</td>
+    <td class="bg-green" contentEditable="true"></td>
+    <td>#3</td>
+    <td>#5</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  <tr>
+    <td>Ct. 3</td>
+    <td class="bg-green" contentEditable="true"></td>
+    <td>#6</td>
+    <td>#2</td>
+    <td class="bg-green" contentEditable="true"></td>
+  </tr>
+  
+</table>
+  </div>
+</div>
+ 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="jquery.min.js"></script>
+<script src="tabs-js.js"></script>
+
+
+</body>
+</html>
