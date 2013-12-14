@@ -1,0 +1,658 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Team Matches</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <link href="final-project-bev-purdue-styles.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  
+  </style>
+</head>
+<body>
+<div id="tabs">
+  <ul>
+  	<li><a href="#tabs-1">Welcome!<br />
+  	&quot;Team Tournament<br />
+  	Scorekeeper&quot;</a></li>
+    <li><a href="#tabs-2">Team Tournament<br />Score Sheet</a></li>
+    <li><a href="#tabs-3">Team Tournament<br />Round1</a></li>
+    <li><a href="#tabs-4">Team Tournament<br />Round2</a></li>
+    <li><a href="#tabs-5">Team Tournament<br />Round3</a></li>
+  </ul>
+
+<!--Team Matches Explanation-->
+<div id="tabs-1">
+<h1>Welcome to the Tennis Round Robin<br />Team Tournament Scorekeeper!</h1>
+<h2>Running a Round Robin Team Tournament Has Never Been Easier!</h2>
+<p>This unique Round Robin Team Tournament Scorekeeper allows you to run team round robins effortlessly and efficiently by automatically assigning pairings and calculating scores.</p>
+<p>What exactly is a round robin team tennis tournament? It is a tournament between two or more teams. Each team brings players, and all of the players on one team play matches against all of the players on the other team over the course of several timed rounds. In each round, the object is to win as many games as possible. At the end of each round, each side reports how many games it won. The team that wins the most games overall wins the tournament.</p>
+<p>This Team Tournament Scorekeeper is designed for:</p>
+<ul>
+	<li>Two Teams</li>
+    <li>Singles <span class="bold italics">or</span> Doubles</li>
+    <li>3 Singles Players <span class="bold italics">or</span> 3 Doubles Partnerships per Team</li>
+    <li>3 rounds of play</li>
+    <li>3 tennis courts</li>
+</ul>
+<p>The Team Tournament Scorekeeper automatically:
+<ul>
+	<li>Assigns pairings for each round on designated courts</li>
+    <li>Totals games won for each round for each team</li>
+    <li>Calculates the final score for each team and determines tournament winner</li> 
+</ul>
+<p>The Tournament Director only needs to enter the games won each round! The Tournament Director has the option of effortlessly entering:
+<ul>
+	<li>The names of the two Teams</li>
+    <li>The names of the Singles Players (ex. &quot;Tommy&quot;) or Doubles Partnerships (ex. &quot;Bev & Ann&quot;)</li>
+    <li>The actual court numbers for the tennis courts being used</li> 
+</ul>
+<h2>Now You Can Actually Watch the Matches! This Tournament Practically Runs Itself!
+<p>&nbsp;</p>
+<h1>Coming Attractions!</h1>
+<p>Stay tuned for additional Round Robin Scorekeepers:</p>
+<ul>
+<li>Team Tournaments with multiple matches and additional players</li>
+<li>Team Tournaments with both singles <span class="bold italics">and</span> doubles play in the same tournament</li>
+<li>Traditional singles or doubles round robin tournaments with rotating partners</li>
+</ul>
+<h1>New Enhanced Features, too!</h1>
+<p>Also coming soon are these great features:
+<ul>
+<li>A unique Weighted Scoring system to account for unplayed games and missed service games in fixed game, timed rounds <span class="italics red">[Jose - I might need some help from you with this one!]</span></li>
+<li>Rotating an uneven number of players and accounting for an unequal total number of rounds played</li>
+<li>Unexpected player retirements or new players arriving after play has begun</li>
+</ul>
+
+</div>
+  
+  <!--Score Sheet-->
+<div id="tabs-2">
+<form>
+    <table width="977" border="1">
+  <caption>
+    Team Tournament<br />Score Sheet
+  </caption>
+  <tr>
+    
+    <th width="244" scope="col">Home & Away Teams<br />(optional: enter team names)</th>
+    <th width="92" scope="col">Singles Player, or<br />Doubles Partnership<br />Number</th>
+    <th width="360" scope="col">Singles Player Name, or<br />Doubles Partners Names<br />(optional)</th>
+    <th width="45" scope="col">Rd. 1<br />Score</th>
+    <th width="45" scope="col">Rd. 2<br />Score</th>
+    <th width="45" scope="col">Rd. 3<br />Score</th>
+    <th width="90" scope="col">Player/<br />
+      Partnership<br />
+Total</th>
+    
+  </tr>
+  <tr>
+    
+    <td class="blue bold font14 bg-green">HOME
+      <input type="text" class="homeNameEnter align-center no-border font14 blue bold" height="30px" placeholder="Opt: Enter HOME team name" size="28">
+    </td>
+    <td>#1</td>
+    <td class="bg-green">
+    	<input type="text" class="p1NameEnter align-right no-border blue bold" placeholder="Example (optional): Enter Bev or Bev & Ann" size="42" height="30px">
+    </td>
+    <td class="r1p1_ss">&nbsp;</td>
+    <td class="r2p1_ss">&nbsp;</td>
+    <td class="r3p1_ss">&nbsp;</td>
+    <td class="p1total">&nbsp;</td>
+    
+  </tr>
+  <tr>
+    
+    <td class="homeNameCopy blue bold font14">HOME</td>
+    <td>#2</td>
+    <td class="bg-green">
+    	<input type="text" class="p2NameEnter align-right no-border blue bold" placeholder="Example (optional): Enter Bev or Bev & Ann" size="42" height="30px">
+    </td>
+    <td class="r1p2_ss">&nbsp;</td>
+    <td class="r2p2_ss">&nbsp;</td>
+    <td class="r3p2_ss">&nbsp;</td>
+    <td class="p2total">&nbsp;</td>
+  </tr>
+  <tr>
+    
+    <td class="homeNameCopy blue bold font14">HOME</td>
+    <td>#3</td>
+    <td class="bg-green">
+    	<input type="text" class="p3NameEnter align-right no-border blue bold" placeholder="Example (optional): Enter Bev or Bev & Ann" size="42" height="30px">
+    </td>
+    <td class="r1p3_ss">&nbsp;</td>
+    <td class="r2p3_ss">&nbsp;</td>
+    <td class="r3p3_ss">&nbsp;</td>
+    <td class="p3total">&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td colspan="6" class="align-right bold blue font14 no-border">HOME TEAM TOTAL</td>
+    <td class="homeTotal bold blue-border">&nbsp;</td>
+    
+  </tr>
+  
+  <!--This row is used for the optional home team name under the Home Team Total-->
+  <tr class="rowHeight30">
+  	<td colspan="6" class="align-right bold blue font14 no-border"></span></td>
+    <td class="homeNameCopy blue bold font14 no-border">&nbsp;</td>
+  </tr>
+  
+  <!--Empty row to add some space between Home and Away-->
+  <tr class="rowHeight30">
+  	<td colspan="7" class="no-border">&nbsp;</td>
+    </tr>
+    
+  <tr>
+    <td class="green bold font14 bg-green">AWAY
+      <input type="text" class="awayNameEnter align-center no-border font14 green bold" height="30px" placeholder="Opt: Enter AWAY team name" size="28">
+    </td>
+    <td>#4</td>
+    <td class="bg-green">
+    	<input type="text" class="p4NameEnter align-right no-border green bold" placeholder="Example (optional): Enter Bev or Bev & Ann" size="42" height="30px">
+    </td>
+    <td class="r1p4_ss">&nbsp;</td>
+    <td class="r2p4_ss">&nbsp;</td>
+    <td class="r3p4_ss">&nbsp;</td>
+    <td class="p4total">&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td class="awayNameCopy green bold font14">AWAY</td>
+    <td>#5</td>
+    <td class="bg-green">
+    	<input type="text" class="p5NameEnter align-right no-border green bold" placeholder="Example (optional): Enter Bev or Bev & Ann" size="42" height="30px">
+    </td>
+    <td class="r1p5_ss">&nbsp;</td>
+    <td class="r2p5_ss">&nbsp;</td>
+    <td class="r3p5_ss">&nbsp;</td>
+    <td class="p5total">&nbsp;</td>
+    
+  </tr>
+  <tr>
+    
+    <td class="awayNameCopy green bold font14">AWAY</td>
+    <td>#6</td>
+    <td class="bg-green">
+    	<input type="text" class="p6NameEnter align-right  green bold no-border" placeholder="Example (optional): Enter Bev or Bev & Ann" size="42" height="30px">
+    </td>
+    <td class="r1p6_ss">&nbsp;</td>
+    <td class="r2p6_ss">&nbsp;</td>
+    <td class="r3p6_ss">&nbsp;</td>
+    <td class="p6total">&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td colspan="6" class="align-right bold green font14 no-border">AWAY TEAM TOTAL</td>
+    <td class="awayTotal bold green-border">&nbsp;</td>
+  </tr>
+  
+  <!--This row is used for the optional away team name under the Home Team Total-->
+  <tr class="rowHeight30">
+  	<td colspan="6" class="align-right bold green font14 no-border"></span></td>
+    <td class="awayNameCopy green bold font14 no-border">&nbsp;</td>
+  </tr>
+  
+</table>
+</form>
+
+<!--Optional Change Court Numbers-->
+<form>       
+<table width="800" border="1">
+  <tr>
+    <td class="black bold">Change Court Numbers<br />(optional)</td>
+    <td class="bold">Ct. 1</td>
+    <td class="bg-green">
+    <input type="text" class="c1 inputBox-height" height="30px" placeholder="Ex: Ct. A" size="8">
+    </td>
+    <td class="bold">Ct. 2</td>
+    <td class="bg-green">
+    <input type="text" class="c2 inputBox-height" height="30px" placeholder="Ex: Ct. B" size="8">
+    </td>
+    <td class="bold">Ct. 3</td>
+    <td class="bg-green">
+    <input type="text" class="c3 inputBox-height" height="30px" placeholder="Ex: Ct. C" size="8">
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+  
+  <!--Round 1-->
+  <div id="tabs-3">
+<form>       
+<table width="951" border="1">
+  <caption>Team Tournament<br />Round 1</caption>
+  <tr>
+    <th width="67" rowspan="2" scope="col">Court #</th>
+    <th width="104" rowspan="2" scope="col" class="align-right paddingGamesWon">Games Won<br />------&#8250;</th>
+    <th colspan="5" scope="col" class="font16">PAIRINGS</th>
+    <th width="104" rowspan="2" scope="col" class="align-left paddingGamesWon">Games Won<br />&#8249;------</th>
+  </tr>
+  <tr>
+    <th colspan="2" scope="col">Player/Partnership</th>
+    <th width="28">vs.</th>
+    <th colspan="2" scope="col">Player/Partnership<br /> (serves first)</th>
+  </tr>
+  <tr>
+    <td class="c1r1 bold">Ct. 1</td>
+    <td class="bg-green">
+    <input type="text" class="r1p6 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="263" class="p6NameCopy align-right green bold">&nbsp;</td>
+    <td width="38" class="green bold">#6</td>
+    <td>vs.</td>
+    <td width="38" class="blue bold">#1</td>
+    <td width="263" class="p1NameCopy align-left blue bold">&nbsp;</td>
+    <td class="bg-green">
+    <input type="text" class="r1p1 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+  </tr>
+  <tr>
+    <td class="c2r1 bold">Ct. 2</td>
+    <td class="bg-green">
+    <input type="text" class="r1p2 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="263" class="p2NameCopy align-right blue bold">&nbsp;</td>
+    <td class="blue bold">#2</td>
+    <td>vs.</td>
+    <td class="green bold">#5</td>
+    <td width="263" class="p5NameCopy align-left green bold">&nbsp;</td>
+    <td class="bg-green">
+      <input type="text" class="r1p5 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+  </tr>
+  <tr>
+    <td class="c3r1 bold">Ct. 3</td>
+    <td class="bg-green">
+    <input type="text" class="r1p3 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="263" class="p3NameCopy align-right blue bold">&nbsp;</td>
+    <td class="blue bold">#3</td>
+    <td>vs.</td>
+    <td class="green bold">#4</td>
+    <td width="263" class="p4NameCopy align-left green bold">&nbsp;</td>
+    <td class="bg-green">
+      <input type="text" class="r1p4 inputBox-height" height="30px" placeholder="Enter score" size="10">
+    </td>
+  </tr>
+</table>
+</form>  
+  </div>
+  
+  <!--Round 2-->
+  <div id="tabs-4">
+<form>       
+<table width="951" border="1">
+  <caption>
+  Team Tournament<br />Round 2
+  </caption>
+  <tr>
+    <th width="67" rowspan="2" scope="col">Court #</th>
+    <th width="104" rowspan="2" scope="col"class="align-right paddingGamesWon">Games Won<br />------&#8250;</th>
+    <th colspan="5" scope="col" class="font16">PAIRINGS</th>
+    <th width="104" rowspan="2" scope="col" class="align-left paddingGamesWon">Games Won<br />&#8249;------</th>
+  </tr>
+  <tr>
+    <th colspan="2" scope="col">Player/Partnership</th>
+    <th width="28">vs.</th>
+    <th colspan="2" scope="col">Player/Partnership<br /> (serves first)</th>
+  </tr>
+  <tr>
+    <td class="c1r2 bold">Ct. 1</td>
+    <td class="bg-green">
+    <input type="text" class="r2p1 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="263" class="p1NameCopy align-right blue bold">&nbsp;</td>
+    <td width="38" class="blue bold">#1</td>
+    <td>vs.</td>
+    <td width="38" class="green bold">#5</td>
+    <td width="263" class="p5NameCopy align-left green bold">&nbsp;</td>
+    <td class="bg-green">
+    <input type="text" class="r2p5 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+  </tr>
+  <tr>
+    <td class="c2r2 bold">Ct. 2</td>
+    <td class="bg-green">
+    <input type="text" class="r2p4 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="238" class="p4NameCopy align-right green bold">&nbsp;</td>
+    <td class="green bold">#4</td>
+    <td>vs.</td>
+    <td class="blue bold">#2</td>
+    <td width="227" class="p2NameCopy align-left blue bold">&nbsp;</td>
+    <td class="bg-green">
+      <input type="text" class="r2p2 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+  </tr>
+  <tr>
+    <td class="c3r2 bold">Ct. 3</td>
+    <td class="bg-green">
+    <input type="text" class="r2p3 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="238" class="p3NameCopy align-right blue bold">&nbsp;</td>
+    <td class="blue bold">#3</td>
+    <td>vs.</td>
+    <td class="green bold">#6</td>
+    <td width="227" class="p6NameCopy align-left green bold">&nbsp;</td>
+    <td class="bg-green">
+      <input type="text" class="r2p6 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+  </tr>
+</table>
+</form>  
+  </div>
+  
+  <!--Round 3-->
+  <div id="tabs-5">
+<form>       
+<table width="951" border="1">
+  <caption>
+  Team Tournament<br />Round 3
+  </caption>
+  <tr>
+    <th width="67" rowspan="2" scope="col">Court #</th>
+    <th width="104" rowspan="2" scope="col"class=" align-right paddingGamesWon">Games Won<br />------&#8250;</th>
+    <th colspan="5" scope="col" class="font16">PAIRINGS</th>
+    <th width="104" rowspan="2" scope="col"class="align-left paddingGamesWon">Games Won<br />&#8249;------</th>
+  </tr>
+  <tr>
+    <th height="35" colspan="2" scope="col">Player/Partnership</th>
+    <th width="28">vs.</th>
+    <th colspan="2" scope="col">Player/Partnership<br /> (serves first)</th>
+  </tr>
+  <tr>
+    <td class="c1r3 bold">Ct. 1</td>
+    <td class="bg-green">
+    <input type="text" class="r3p4 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="263" class="p4NameCopy align-right green bold">&nbsp;</td>
+    <td width="38" class="green bold">#4</td>
+    <td>vs.</td>
+    <td width="38" class="blue bold">#1</td>
+    <td width="263" class="p1NameCopy align-left blue bold">&nbsp;</td>
+    <td class="bg-green">
+    <input type="text" class="r3p1 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+  </tr>
+  <tr>
+    <td class="c2r3 bold">Ct. 2</td>
+    <td class="bg-green">
+    <input type="text" class="r3p3 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="242" class="p3NameCopy align-right blue bold">&nbsp;</td>
+    <td class="blue bold">#3</td>
+    <td>vs.</td>
+    <td class="green bold">#5</td>
+    <td width="225" class="p5NameCopy align-left green bold">&nbsp;</td>
+    <td class="bg-green">
+      <input type="text" class="r3p5 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+  </tr>
+  <tr>
+    <td class="c3r3 bold">Ct. 3</td>
+    <td class="bg-green">
+    <input type="text" class="r3p6 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+    <td width="242" class="p6NameCopy align-right green bold">&nbsp;</td>
+    <td class="green bold">#6</td>
+    <td>vs.</td>
+    <td class="blue bold">#2</td>
+    <td width="225" class="p2NameCopy align-left blue bold">&nbsp;</td>
+    <td class="bg-green">
+      <input type="text" class="r3p2 inputBox-height" height="30px" placeholder="games won" size="10">
+    </td>
+  </tr>
+</table>
+</form>  
+  </div>
+</div>
+ 
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script> 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="final-project-bev-purdue.js"></script>
+
+<!--<script type="text/javascript">
+
+$(function() {
+    $( "#tabs" ).tabs();
+	
+/*Explanation of Selectors
+Every td that is used to input data, and every td that is used to receive this data, has been given a class that is used in the code as the selector. The class names use the following abbreviations:
+r = round
+p = player (or partnership)
+ss = scoresheet
+c = court
+
+For example, r1 means Round 1, p1 means player or partnership #1, c1 means court #1.
+The class .r1p1 refers to the td in Round 1 where the score for player or partnership #1 is entered by the user.
+The class .r1p1_ss refers to the td on the Score Sheet that receives the score from .r1p1.
+The class .c1 refers to court #1 and the class .c1r1 refers to the td for Round 1 Court #1. 
+
+The td's that enter player names and receive player names use the classes of .p1NameEnter and .p1NameCopy.
+Similarly, the td's that enter team names and receive team names use the classes of .homeEnter and .homeCopy, or .awayEnter and .awayCopy.*/
+	
+	
+ //Round 1: Transfer scores from Round 1 to Score Sheet Tab
+  		//Round 1 Player 1
+		$('.r1p1').on('keyup', function () {
+    	$('.r1p1_ss').text($(this).val());
+			$('.p1total').text(Number($('.r1p1_ss').text()) + Number($('.r2p1_ss').text()) + Number($('.r3p1_ss').text()));
+	   			$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 1 Player 2
+		$('.r1p2').on('keyup', function () {
+    	$('.r1p2_ss').text($(this).val());
+  			$('.p2total').text(Number($('.r1p2_ss').text()) + Number($('.r2p2_ss').text()) + Number($('.r3p2_ss').text()));
+  				$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 1 Player 3
+		$('.r1p3').on('keyup', function () {
+    	$('.r1p3_ss').text($(this).val());
+  			$('.p3total').text(Number($('.r1p3_ss').text()) + Number($('.r2p3_ss').text()) + Number($('.r3p3_ss').text()));
+  				$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 1 Player 4
+		$('.r1p4').on('keyup', function () {
+    	$('.r1p4_ss').text($(this).val());
+  			$('.p4total').text(Number($('.r1p4_ss').text()) + Number($('.r2p4_ss').text()) + Number($('.r3p4_ss').text()));
+  				$('.awayTotal').text(Number($('.p4total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		});
+		
+		//Round 1 Player 5
+		$('.r1p5').on('keyup', function () {
+    	$('.r1p5_ss').text($(this).val());
+  			$('.p5total').text(Number($('.r1p5_ss').text()) + Number($('.r2p5_ss').text()) + Number($('.r3p5_ss').text()));
+  				$('.awayTotal').text(Number($('.p4total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		});
+		
+		//Round 1 Player 6
+		$('.r1p6').on('keyup', function () {
+    	$('.r1p6_ss').text($(this).val());
+  			$('.p6total').text(Number($('.r1p6_ss').text()) + Number($('.r2p6_ss').text()) + Number($('.r3p6_ss').text()));
+  				$('.awayTotal').text(Number($('.p4total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		});
+		
+//Round 2: Transfer scores from Round 2 to Score Sheet Tab
+		//Round 2 Player 1
+		$('.r2p1').on('keyup', function () {
+    	$('.r2p1_ss').text($(this).val());
+			$('.p1total').text(Number($('.r1p1_ss').text()) + Number($('.r2p1_ss').text()) + Number($('.r3p1_ss').text()));
+  				$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 2 Player 2
+		$('.r2p2').on('keyup', function () {
+    	$('.r2p2_ss').text($(this).val());
+  			$('.p2total').text(Number($('.r1p2_ss').text()) + Number($('.r2p2_ss').text()) + Number($('.r3p2_ss').text()));
+  				$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 2 Player 3
+		$('.r2p3').on('keyup', function () {
+    	$('.r2p3_ss').text($(this).val());
+			$('.p3total').text(Number($('.r1p3_ss').text()) + Number($('.r2p3_ss').text()) + Number($('.r3p3_ss').text()));
+  				$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 2 Player 4
+		$('.r2p4').on('keyup', function () {
+    	$('.r2p4_ss').text($(this).val());
+  			$('.p4total').text(Number($('.r1p4_ss').text()) + Number($('.r2p4_ss').text()) + Number($('.r3p4_ss').text()));
+  				$('.awayTotal').text(Number($('.p4total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		});
+		
+		//Round 2 Player 5
+		$('.r2p5').on('keyup', function () {
+    	$('.r2p5_ss').text($(this).val());
+  			$('.p5total').text(Number($('.r1p5_ss').text()) + Number($('.r2p5_ss').text()) + Number($('.r3p5_ss').text()));
+  				$('.awayTotal').text(Number($('.p4total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		});
+		
+		//Round 2 Player 6
+		$('.r2p6').on('keyup', function () {
+    	$('.r2p6_ss').text($(this).val());
+  			$('.p6total').text(Number($('.r1p6_ss').text()) + Number($('.r2p6_ss').text()) + Number($('.r3p6_ss').text()));
+  				$('.awayTotal').text(Number($('.p41total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		}); 
+		
+//Round 3:Transfer scores from Round 3 to Score Sheet Tab
+  		//Round 3 Player 1 
+		$('.r3p1').on('keyup', function () {
+    	$('.r3p1_ss').text($(this).val());
+  			$('.p1total').text(Number($('.r1p1_ss').text()) + Number($('.r2p1_ss').text()) + Number($('.r3p1_ss').text()));
+  				$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 3 Player 2
+		$('.r3p2').on('keyup', function () {
+    	$('.r3p2_ss').text($(this).val());
+  			$('.p2total').text(Number($('.r1p2_ss').text()) + Number($('.r2p2_ss').text()) + Number($('.r3p2_ss').text()));
+  				$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 3 Player 3
+		$('.r3p3').on('keyup', function () {
+    	$('.r3p3_ss').text($(this).val());
+			$('.p3total').text(Number($('.r1p3_ss').text()) + Number($('.r2p3_ss').text()) + Number($('.r3p3_ss').text()));
+  				$('.homeTotal').text(Number($('.p1total').text()) + Number($('.p2total').text()) + Number($('.p3total').text()))
+  		});
+		
+		//Round 3 Player 4
+		$('.r3p4').on('keyup', function () {
+    	$('.r3p4_ss').text($(this).val());
+  			$('.p4total').text(Number($('.r1p4_ss').text()) + Number($('.r2p4_ss').text()) + Number($('.r3p4_ss').text()));
+  				$('.awayTotal').text(Number($('.p4total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		});
+		
+		//Round 3 Player 5
+		
+		$('.r3p5').on('keyup', function () {
+    	$('.r3p5_ss').text($(this).val());
+  			$('.p5total').text(Number($('.r1p5_ss').text()) + Number($('.r2p5_ss').text()) + Number($('.r3p5_ss').text()));
+  				$('.awayTotal').text(Number($('.p4total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		});
+		
+		//Round 3 Player 6
+		$('.r3p6').on('keyup', function () {
+    	$('.r3p6_ss').text($(this).val());
+  			$('.p6total').text(Number($('.r1p6_ss').text()) + Number($('.r2p6_ss').text()) + Number($('.r3p6_ss').text()));
+  				$('.awayTotal').text(Number($('.p4total').text()) + Number($('.p5total').text()) + Number($('.p6total').text()))
+  		});
+
+//Add Team Names
+	//Home Team
+	$('.homeNameEnter').on('keyup', function () {
+    	$('.homeNameCopy').text($(this).val());
+	});
+	//Away Team
+	$('.awayNameEnter').on('keyup', function () {
+    	$('.awayNameCopy').text($(this).val());
+	});
+	
+//Add Singles Player Name or Doubles Partnership Names
+	//Player or Partnership #1
+	$('.p1NameEnter').on('keyup', function () {
+    	$('.p1NameCopy').text($(this).val());
+	});
+	
+	//Player or Partnership #2
+	$('.p2NameEnter').on('keyup', function () {
+    	$('.p2NameCopy').text($(this).val());
+	});
+	
+	//Player or Partnership #3
+	$('.p3NameEnter').on('keyup', function () {
+    	$('.p3NameCopy').text($(this).val());
+	});
+	
+	//Player or Partnership #4
+	$('.p4NameEnter').on('keyup', function () {
+    	$('.p4NameCopy').text($(this).val());
+	});
+	
+	//Player or Partnership #5
+	$('.p5NameEnter').on('keyup', function () {
+    	$('.p5NameCopy').text($(this).val());
+	});
+	
+	//Player or Partnership #6
+	$('.p6NameEnter').on('keyup', function () {
+    	$('.p6NameCopy').text($(this).val());
+	});
+	
+//Change Court Numbers
+	//Round 1
+	$('.c1').on('keyup', function () {
+    	$('.c1r1').text($(this).val());
+	});
+	
+	$('.c2').on('keyup', function () {
+    	$('.c2r1').text($(this).val());
+	});
+	
+	$('.c3').on('keyup', function () {
+    	$('.c3r1').text($(this).val());
+	});
+	
+	//Round 2
+	$('.c1').on('keyup', function () {
+    	$('.c1r2').text($(this).val());
+	});
+	
+	$('.c2').on('keyup', function () {
+    	$('.c2r2').text($(this).val());
+	});
+	
+	$('.c3').on('keyup', function () {
+    	$('.c3r2').text($(this).val());
+	});
+	
+	//Round 3
+	$('.c1').on('keyup', function () {
+    	$('.c1r3').text($(this).val());
+	});
+	
+	$('.c2').on('keyup', function () {
+    	$('.c2r3').text($(this).val());
+	});
+	
+	$('.c3').on('keyup', function () {
+    	$('.c3r3').text($(this).val());
+	});	
+	
+});	
+</script>
+-->
+</body>
+</html>

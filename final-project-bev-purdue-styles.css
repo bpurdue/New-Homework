@@ -1,0 +1,111 @@
+@charset "UTF-8";
+#tabs #tabs-1 h1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	text-shadow: 1px 1px #F00;
+}
+#tabs #tabs-1 h2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	color: #F00;
+}
+.italics {
+	font-style: italic;
+}
+#tabs #tabs-1 ul caption {
+	padding-top: 0px;
+	margin-top: 0px;
+}
+table  {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+}
+table caption  {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+}
+table tr th  {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	height: 30px;
+}
+table tr {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: normal;
+	height: 60px;
+}
+.rowHeight30 {
+	height: 30px;
+}
+table tr td {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	font-weight: normal;
+	/* [disabled]padding: 10px; */
+}
+.inputBox-height {
+	height: 30px;
+}
+.font14 {
+	font-size: 14px;
+}
+.font16 {
+	font-size: 16px;
+}
+.black {
+	color: #000;
+}
+.align-right {
+	text-align: right;
+}
+.align-left {
+	text-align: left;
+}
+.align-center {
+	text-align: center;
+}
+.no-border {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.bold {
+	font-weight: bold;
+}
+.bg-green {
+	background-color: #b8f5ac;
+}
+.bg-red {
+	background-color: #fa8383;
+}
+.blue {
+	color: #00F;
+}
+.green {
+	color: #093;
+}
+.red {
+	color: #F00;
+}
+.blue-border {
+	border: 3px solid #00F;
+}
+.green-border {
+	border: 3px solid #093;
+}
+columnWidth {
+	column-width: 48px;
+}
+.paddingGamesWon {
+	padding-top: 35px;
+	padding-bottom: 0px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+	
