@@ -31,16 +31,19 @@ var myList = document.createElement('dl');
 var myTerm = document.createElement('dt');
 var myDef = document.createElement('dd');
 
-textTerm = '"chip and charge"';
-textNode1 = document.createTextNode(textTerm);
+var textTerm = '"chip and charge"';
+var textNode1 = document.createTextNode(textTerm);
+
 myTerm.appendChild(textNode1);
 
-textDef = 'A "chip and charge" is a type of approach shot in tennis where the baseline player hits a slice shot, moves rapidly to the net, and takes the offensive by being in a good volley position for the next shot.';
-textNode2 = document.createTextNode(textDef);
+var textDef = 'A "chip and charge" is a type of approach shot in tennis where the baseline player hits a slice shot, moves rapidly to the net, and takes the offensive by being in a good volley position for the next shot.';
+var textNode2 = document.createTextNode(textDef);
+
 myDef.appendChild(textNode2);
 
 myList.appendChild(myTerm);
 myList.appendChild(myDef);
+
 document.body.appendChild(myList);
 
 
@@ -64,19 +67,5 @@ container.innerHTML += '<dl><dt>"chip and charge"</dt><dd>A "chip and charge" is
 // this problem you won't need to worry about setting up a click handler.
 // Just worry about the code that does the text appending.
 
- $('#definitions')
-.append('<dl><dt>"chip and charge"</dt><dd>A "chip and charge" is a type of approach shot in tennis where the baseline player hits a slice shot, moves rapidly to the net, and takes the offensive by being in a good volley position for the next shot.</dd></dl>');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$('#definitions')
+	.append('<dl><dt>"chip and charge"</dt><dd>A "chip and charge" is a type of approach shot in tennis where the baseline player hits a slice shot, moves rapidly to the net, and takes the offensive by being in a good volley position for the next shot.</dd></dl>');
