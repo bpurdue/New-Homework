@@ -22,12 +22,12 @@ console.log(document.querySelectorAll('.highlight'));
 
 // Any element under a form tag (hint: the asterisk is the wild card in CSS)
 
-console.log(document.querySelectorAll('form > *'));
+console.log(document.querySelectorAll('form *'));
 
 // All elements with the IDs "movies", "companies", or "fast_food" 
 // (hint: use the comma to separate selectors)
 
-console.log(document.querySelectorAll(['#movies > *', '#companies > *', '#fast_food > *']));
+console.log(document.querySelectorAll('#movies, #companies, #fast_food'));
 
 // All elements that have an ID attribute
 
@@ -39,11 +39,11 @@ console.log(document.querySelectorAll('[id$="s"]'));
 
 // The first child LI element of all lists, ordered or unordered
 
-console.log(document.querySelectorAll('ul > li:nth-of-type(1),ol > li:nth-of-type(1)'));
+console.log(document.querySelectorAll('ul > li:nth-of-type(1), ol > li:nth-of-type(1)'));
 
 // The second child LI element of all lists, ordered or unordered
 
-console.log(document.querySelectorAll('ul > li:nth-of-type(1),ol > li:nth-of-type(2)'));
+console.log(document.querySelectorAll('ul > li:nth-of-type(2), ol > li:nth-of-type(2)'));
 
 // All elements that are empty
 
